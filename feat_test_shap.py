@@ -11,10 +11,10 @@ def interpret_model_with_shap():
     # Create a SHAP Explainer
     explainer = shap.LinearExplainer(model, X_test.to_numpy())
 
-    # 3. Calculate SHAP values for the test data
+    #  Calculate SHAP values for the test data
     shap_values = explainer.shap_values(X_test.to_numpy())
 
-    # 4. Visualize the Global Feature Importance (Summary Plot)
+    # Visualize the Global Feature Importance (Summary Plot)
     print("Generating SHAP Summary Plot...")
     shap.summary_plot(
         shap_values,

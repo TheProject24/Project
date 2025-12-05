@@ -13,11 +13,10 @@ def train_and_evaluate_model():
 
     # Train the Model
     model = LogisticRegression(random_state=42, max_iter=1000)
-    # The solver 'liblinear' is often recommended for small datasets/binary problems
-    # model = LogisticRegression(random_state=42, max_iter=1000, solver='liblinear')
+
     model.fit(X_train, y_train)
 
-    # 3. Model Evaluation
+    # Model Evaluation
     accuracy = model.score(X_test, y_test)
     print(f"Logistic Regression Model Training Complete!")
     print(f"Model Accuracy on Test Set: {accuracy:.4f}")
